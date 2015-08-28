@@ -1,0 +1,51 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Media Request Form Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        width: 150px;
+      }
+
+      p {
+        display: block;
+        border: 1px solid black;
+        padding: 0.5em;
+        border-radius: 1em;
+      }
+
+      a:link, a:visited, a:hover, a:active {
+        text-decoration: none;
+        color: black;
+      }
+
+      a:hover {
+        color: #ee7600; /* Dark Orange */
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+  </head>
+  <body>
+    <div id="info-edit">
+      <a target="_blank" href="form.html"><p>Edit Media Request info</p></a>
+    </div>
+
+    <div id="go-to-page">
+      <a target="_blank" href="https://blogs.univmiami.net/experts/media-request-form/"><p>Go to Media Request Page</p></a>
+    </div>
+    <script src="formFill.js"></script>
+  </body>
+</html>

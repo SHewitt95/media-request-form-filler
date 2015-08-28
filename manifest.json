@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Media Request Form Filler",
+  "description": "Stores user info for UM's media request form. The Media Request is filled with user's stored info.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Media Request Form Filler"
+  },
+
+  "content_scripts": [
+      {
+        "matches": ["https://blogs.univmiami.net/experts/media-request-form/"],
+        "js": ["formFill.js"]
+      }
+    ],
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ]
+}
